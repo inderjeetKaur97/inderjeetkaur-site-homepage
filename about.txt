@@ -1,0 +1,9 @@
+ <p>
+My name is Inderjeet Kaur and I love making interesting web applications. I was introduced to C++ coding. when I was in 11th grade, but it wasn't until recently that I realised I wanted to advance my career in this field.
+              </p>
+              <p>
+In my college days, as I was exploring different domains, I got intrigued by digital marketing and how the dynamics of marketing have changed in today's era. Later on, I pursued my career as a full-fledged digital marketing manager at an ad agency and a financial firm.
+              </p>
+              <p>
+                My love for coding started with styling websites and elements on codepen, making interactive buttons and learning about networking. Today, I want to do more than just style and interact. I want to use web technology to solve customer problems and provide an innovative approach to an already existing solution.
+              </p>

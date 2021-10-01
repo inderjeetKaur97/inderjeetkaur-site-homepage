@@ -1,0 +1,174 @@
+
+/* ---------------------------class to hide bg load after loading is done--------------------- */
+.hide-bg-load{
+  display: none;
+}
+
+
+/* ---------------------------loading animation and background--------------------- */
+body{
+  overflow: hidden;
+}
+.bg-load {
+  background-image: url("../img/bg-home.jpg");
+  background-position: center;
+  background-size: 140%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  z-index: -1;
+
+}
+.bg-load::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: black;
+  opacity: 0.95;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.logo-ani {
+  width: 12vw;
+  /* height: 10vh; */
+  margin: auto;
+  position: relative;
+  top: 30vh;
+  left: -1vw;
+}
+.logo-ani svg:nth-child(1) {
+  width: inherit;
+  height: inherit;
+}
+
+.logo-ani svg {
+  animation: zoom-out 0.7s ease-in 4s;
+}
+
+.logo-ani  #i-1 Path {
+  stroke-miterlimit: 10;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: ani-i1 1.5s ease-out 0.3s forwards;
+}
+.logo-ani  #i-2 Path {
+  fill: transparent;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: ani-i2 1.5s ease-out 0.7s forwards;
+}
+.logo-ani  #k-1 Path {
+  fill: transparent;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: ani-i2 1.5s ease-out 1.2s forwards;
+}
+.logo-ani  #k-2 Path {
+  fill: transparent;
+  stroke-dasharray: 750;
+  stroke-dashoffset: 750;
+  animation: ani-k2 1.5s ease-out 1.8s forwards;
+}
+.logo-ani #k-3 path {
+  fill: transparent;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: ani-i1 1.5s ease-out 2.3s forwards;
+}
+
+/*---------------------------------------- Animations styling in the logo------------------------------------- */
+@keyframes ani-i1 {
+  0% {
+    stroke-dashoffset: 320;
+  }
+  20% {
+    stroke-dashoffset: 300;
+  }
+  40% {
+    stroke-dashoffset: 250;
+  }
+  50% {
+    stroke-dashoffset: 200;
+  }
+  60% {
+    stroke-dashoffset: 150;
+  }
+  80% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    
+  }
+}
+@keyframes ani-i2 {
+  0% {
+    stroke-dashoffset: 520;
+  }
+  20% {
+    stroke-dashoffset: 500;
+  }
+  40% {
+    stroke-dashoffset: 400;
+  }
+  50% {
+    stroke-dashoffset: 300;
+  }
+  60% {
+    stroke-dashoffset: 200;
+  }
+  80% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    
+  }
+}
+
+@keyframes ani-k2 {
+  0% {
+    stroke-dashoffset: 750;
+  }
+  20% {
+    stroke-dashoffset: 700;
+  }
+  40% {
+    stroke-dashoffset: 600;
+  }
+  50% {
+    stroke-dashoffset: 500;
+  }
+  60% {
+    stroke-dashoffset: 400;
+  }
+  80% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes zoom-out {
+  30% {
+    transform: scale(0.8);
+  }
+  40% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+  60% {
+    transform: scale(0.5);
+  }
+  80% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(0);
+  }
+}

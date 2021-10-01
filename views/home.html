@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="../public/css/utils.css" />
+  <!-- <link rel="stylesheet" href="../public/css/home.css" /> -->
+  <!-- <script defer src="../public/js/home.js"></script> -->
+
+  <title>Home</title>
+  <style>
+    body[data-aos-duration="6000"] [data-aos],
+    [data-aos][data-aos][data-aos-duration="6000"] {
+      transition-duration: 6000ms;
+    }
+
+    body {
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: auto;
+      width: auto;
+    }
+
+    body::-webkit-scrollbar {
+      width: 0.5vw;
+      background-color: var(--ter-color-d2);
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: var(--ter-color-l1);
+      border-radius: 20px;
+    }
+
+    .nav-bar {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 3%;
+      color: white;
+    }
+
+    /*------------------------ start - classes added by javacript to navbar hide and show---------- */
+    .nav-bar-lock {
+      background-color: #29292a;
+      position: fixed;
+      align-items: center;
+      width: 83vw;
+      z-index: +1;
+      top: -6%;
+      left: 8%;
+      box-shadow: 2px 12px 27px 0.7px rgb(19, 18, 18);
+    }
+
+    .nav-bar-logo-lock {
+      padding: 1.5% 0;
+      height: 21vh;
+      transform: scale(0.8);
+    }
+
+    /*------------------------ End - classes added by javacript to navbar hide and show---------- */
+
+    .nav-bar .logo-home {
+      margin: -3% 0%;
+    }
+
+    .nav-bar .logo-home svg {
+      width: 13vw;
+      height: 17vh;
+    }
+
+    .nav-bar .logo-home svg:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    .nav-bar ul {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      list-style: none;
+    }
+
+    .nav-bar ul li {
+      transition: transform 0.1s linear;
+    }
+
+    .nav-bar ul li a {
+      display: inline-block;
+      color: whitesmoke;
+      padding: 15px;
+      font-family: var(--pri-font);
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      transition: transform 0.2s ease-in;
+    }
+
+    .nav-bar ul a:hover {
+      transform: scale(1.1);
+      border-bottom: 3px solid var(--pri-color);
+      margin: -2% 0;
+    }
+
+    .nav-bar-hide {
+      top: -20%;
+      transition: top 0.3s linear 0s;
+    }
+
+    .nav-bar-show {
+      top: -6%;
+      transition: top 0.3s linear 0s;
+    }
+
+    /* ------------------about sec---------------------------- */
+
+    body[data-aos-delay="5000"] [data-aos],
+    [data-aos][data-aos][data-aos-delay="5000"] {
+      transition-delay: 5000ms;
+    }
+
+    body[data-aos-delay="4500"] [data-aos],
+    [data-aos][data-aos][data-aos-delay="4500"] {
+      transition-delay: 4500ms;
+    }
+
+    body[data-aos-delay="4600"] [data-aos],
+    [data-aos][data-aos][data-aos-delay="4600"] {
+      transition-delay: 4600ms;
+    }
+
+    body[data-aos-delay="4700"] [data-aos],
+    [data-aos][data-aos][data-aos-delay="4700"] {
+      transition-delay: 4700ms;
+    }
+
+    body[data-aos-delay="4800"] [data-aos],
+    [data-aos][data-aos][data-aos-delay="4800"] {
+      transition-delay: 4800ms;
+    }
+
+    body[data-aos-delay="4900"] [data-aos],
+    [data-aos][data-aos][data-aos-delay="4900"] {
+      transition-delay: 4900ms;
+    }
+
+    /* ------------------------Social icons section css------------------------- */
+    .home-div-cont {
+      display: flex;
+    }
+
+    .social-icons {
+      background-color: transparent;
+      color: red;
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: +1;
+      width: 5vw;
+      bottom: 0%;
+    }
+
+    .social-icons ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      list-style: none;
+      height: 58vh;
+      width: inherit;
+    }
+
+    .social-icons .items svg {
+      height: 5vw;
+      width: 5vh;
+      margin-left: 46%;
+      stroke: var(--ter-color);
+      position: relative;
+      transition: top 0.4s ease 0s;
+      top: 0;
+    }
+
+    .social-icons .items svg:hover {
+      stroke: var(--pri-color);
+      top: -8%;
+    }
+
+    .social-icons .git-icon svg {
+      stroke-width: 8px;
+    }
+
+    .social-icons .linkedin-icon svg {
+      width: 4vh;
+      stroke-width: 1.5px;
+    }
+
+    .social-icons .fb-icon svg {
+      width: 6vh;
+      stroke-width: 15px;
+    }
+
+    .social-icons .insta-icon svg {
+      width: 4vh;
+      stroke-width: 1.5px;
+    }
+
+    .social-icons ul .vr-line {
+      border-left: 0.2vw solid var(--ter-color);
+      height: 38%;
+    }
+
+    /* --------------------------------------------end social media icons-------------- */
+
+    /* ---------------------------home-content--------------- */
+    .nav-list {
+      margin-right: 1%;
+    }
+
+    /* ul margin-right 1% and font size 0.9rem */
+    .bg-home {
+      position: relative;
+      background-image: url("../public/img/bg-home.jpg");
+      background-position: center;
+      background-size: 140%;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      z-index: 0;
+    }
+
+    .bg-home::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: black;
+      opacity: 0.85;
+      height: 100%;
+      width: 100vw;
+    }
+
+/* -----changing home section default setting------ */
+    .home-section {
+      position: absolute;
+      top: 0;
+      left: 8.5%;
+    }
+
+    .home-content {
+      margin: 0 6%;
+      margin-top: 5%;
+    }
+
+    .home-content .typed-effect-home {
+      display: inline-block;
+      color: var(--sec-color);
+      color: white;
+      font-family: var(--ter-font);
+      font-size: 1.1rem;
+      margin-top: -1%;
+    }
+
+    .home-content p:nth-child(5) {
+      width: 30vw;
+      text-align: justify;
+      margin-bottom: 5%;
+    }
+    .home-content p:nth-child(5) a {
+      color: var(--pri-color);
+      font-weight: 600;
+      transition: text-decoration 1s ease-in;
+    }
+
+    .home-content p:nth-child(5) a:hover {
+      text-decoration: underline;
+    }
+    .home-content h1 {
+      color: #e3e3e3;
+      font-family: var(--pri-font);
+      font-weight: bolder;
+      font-size: 3.5rem;
+      margin-top: 2%;
+    }
+
+    .home-content h3 {
+      color: var(--pri-color-d1);
+      font-family: var(--pri-font);
+      font-weight: bolder;
+      font-size: 3rem;
+      margin-bottom: 2.5%;
+    }
+
+
+    /* ------------------------about section css ------------------*/
+
+    .about {
+      width: 60%;
+      margin-right: 10%;
+    }
+
+    .about p {
+      padding: 3% 0;
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    .about-img-div {
+      width: 30%;
+      margin: auto;
+      position: relative;
+      opacity: 1;
+      background-color: var(--pri-color);
+      transition: background-color 0.3s ease-in;
+    }
+
+    .about-img-div img {
+      width: 100%;
+      position: relative;
+      filter: brightness(1.1);
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+
+    .about-img-div img:hover {
+      opacity: 1;
+    }
+
+    .about-img-div:hover {
+      background-color: var(--ter-color-d2);
+    }
+
+    .bg-about {
+      position: relative;
+      z-index: 0;
+    }
+
+    .about-img-div::before {
+      content: "";
+      position: absolute;
+      top: 20%;
+      right: -1%;
+      width: 100%;
+      height: 80%;
+      border: 3px solid var(--pri-color-d1);
+      z-index: -1;
+      box-shadow: 0 0 1px var(--ter-color-d1), 0 0 5px #29171c,
+        0 0 10px #8d1130, -0 0 15px var(--pri-color);
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in;
+    }
+
+    .about-img-div:hover::before {
+      transform: scale(1.05);
+    }
+
+    .cont-head-div {
+      margin-top: 8%;
+    }
+
+    /* ------------------------projects section css ------------------*/
+
+    .project-cont-div {
+      margin-bottom: 15%;
+      position: relative;
+      height: 50vh;
+    }
+
+    .project-img-div {
+      position: relative;
+      left: -22%;
+      top: 0%;
+      width: 40vw;
+      background-color: var(--pri-color);
+    }
+
+    .project-img-div img {
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+      box-shadow: 3px 3px 10px black;
+    }
+
+    .project-img-div img:hover {
+      opacity: 1;
+    }
+
+    .project-img-div:hover {
+      transform: scale(0.99);
+    }
+
+    .project-text {
+      position: absolute;
+      right: -5%;
+      top: 23%;
+      /* new line  */
+      width: 58%;
+      height: 16vh;
+      margin-left: 5%;
+      text-align: right;
+
+    }
+
+    .project-text h2 {
+      margin-bottom: 4%;
+
+    }
+
+    .project-text h2 a {
+      color: var(--ter-color-l2);
+      font-family: var(--pri-font);
+      font-weight: 600;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+
+    }
+
+    .project-text a:hover {
+      color: var(--pri-color);
+    }
+
+    .project-text p {
+      
+      background-color: var(--ter-color-d1);
+      box-shadow: 5px 3px 15px black;
+      opacity: 0.9;
+      border-radius: 4px;
+      padding: 3% 3%;
+      font-size: 0.9rem;
+
+    }
+
+    .project-icons {
+      width: 100%;
+      margin-top: 5%;
+    }
+
+    .project-icons i {
+      color: var(--ter-color-l1);
+      transform: scale(1.5);
+      margin: 0 4%;
+      position: relative;
+      top: 0;
+      transition: top 0.3s ease;
+
+
+    }
+
+    .project-icons i:hover {
+      color: var(--pri-color);
+      top: -0.7vh;
+
+    }
+
+    .flex-reverse {
+      flex-direction: row-reverse;
+    }
+
+
+    .marg-reset-img {
+      left: 22%;
+    }
+
+    .marg-reset-text {
+      margin-left: 0;
+      text-align: left;
+      left: -5%;
+    }
+
+    /*------------- other project desing --------------- */
+    .other-proj-cont {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .other-projects {
+      width: 50%;
+      height: 55vh;
+      text-align: left;
+      margin: 5%;
+    }
+
+    .other-proj-img-div {
+      background-color: var(--pri-color);
+      position: relative;
+      width: 100%;
+    }
+
+    .other-projects img {
+      width: 100%;
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+    }
+
+    .other-projects img:hover {
+
+      opacity: 1;
+    }
+
+    .other-projects h3 {
+      font-family: var(--pri-font);
+      color: var(--ter-color-l2);
+      margin: 5% 0;
+    }
+
+    .other-projects p {
+      font-size: 0.9rem;
+    }
+
+    .other-projects i {
+      margin-left: 1%;
+      margin-top: 2%;
+      transform: scale(1.7);
+    }
+
+
+    /* -----------contact section style ------------- */
+    .contact-section .contact-content {
+      position: relative;
+      bottom: -20vh;
+      width: 50%;
+
+    }
+    .contact-content p {
+      height: 24%;
+      /* new line  */
+      margin-top: 10%;
+      text-align: center;
+    }
+
+    .btn-contact {
+      margin-top: 5%;
+      text-align: center;
+    }
+
+    .btn-contact .btn{
+      width: 50%;
+    }
+
+
+     /* ------------------experience section styling ------------- */
+     .exp-section {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      /* background-color: pink; */
+    }
+
+    .exp-content {
+      /* border: 2px solid rgb(12, 248, 228); */
+      width: 70%;
+      height: 50%;
+      position: relative;
+      display: flex;
+      margin: auto;
+    }
+
+    .cont-head-exp {
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+
+    .cont-head-exp hr {
+      width: 100%;
+    }
+
+    .exp-content .left-div {
+      /* border: 2px solid pink; */
+      width: 30%;
+      height: 45vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0 3%;
+
+    }
+
+    .exp-content .left-div .item-div {
+      /* border: 2px solid green; */
+      height: 100%;
+      justify-content: space-between;
+      margin: 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .exp-content .left-div .item-div span {
+      font-family: var(--pri-font);
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+
+    .exp-content .left-div .item-div:hover {
+      cursor: pointer;
+      background-color: var(--ter-color-d3);
+      color: var(--pri-color);
+      /* border-left: 2px solid var(--pri-color-d1); */
+    }
+
+    .exp-content .right-div {
+      /* border: 2px solid rgb(255, 0, 221); */
+      width: 100%;
+    }
+
+    .exp-content .right-div h2 {
+      color: var(--ter-color-l2);
+      font-family: var(--pri-font);
+      margin: 0 0;
+    }
+
+    .exp-content .right-div p {
+     
+      margin: 3% 0;
+    }
+
+    .exp-content .right-div ul {
+      margin: 5% 0;
+    }
+
+    .exp-content .right-div li {
+      color: var(--ter-color-l1);
+      font-family: var(--sec-font);
+      margin: 2% 0;
+      font-size: 0.83rem;
+      margin-bottom: 4%;
+    }
+
+    .right-div-show {
+      display: inline-block;
+
+    }
+
+    .right-div-hide {
+      display: none;
+    }
+
+    .item-div-not-active {
+      border-left: 2px solid var(--ter-color-l1);
+      color: var(--ter-color-l1);
+      transition: color 0.3s ease-in;
+      transition: background-color 1s ease-in;
+      transition: border-left 0.2s ease-in-out;
+
+    }
+
+    .item-div-active {
+      border-left: 2px solid var(--pri-color-d1);
+      background-color: var(--ter-color-d3);
+      color: var(--pri-color);
+      transition: color 0.3s ease-in;
+      transition: background-color 1s ease-in;
+      transition: border-left 0.2s ease-in-out;
+    }
+
+   
+
+   
+
+
+
+
+
+
+
+
+
+
+    /* -------------------------footer styling---------------------- */
+    footer {
+      background-color: var(--ter-color-d2);
+      height: 10vh;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      color: var(--pri-color-d1);
+      /* margin-bottom: 10px; */
+      font-size: 0.8rem;
+      font-family: var(--pri-font);
+    }
+
+    footer p {
+      /* background-color: var(--ter-color-d2); */
+      text-align: center;
+      margin-bottom: 10%;
+      font-weight: 500;
+      font-size: 0.7rem;
+      margin-bottom: 1vh;
+      color: whitesmoke;
+    }
+
+    footer a {
+      color: var(--ter-color-l2);
+      font-size: 1.1rem;
+    }
+
+    footer a:hover {
+      color: var(--pri-color)
+    }
+
+    .project-text ul {
+      display: flex;
+      color: var(--ter-color-l2);
+      font-family: var(--ter-font);
+      justify-content: right;
+    }
+
+    .project-text li {
+      margin-left: 5%;
+      margin-top: 2%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="home-div-cont">
+    <aside class="social-icons" data-aos="fade" data-aos-duration="1500">
+      <ul>
+        <li class="items git-icon">
+          <a href="#">
+            <?xml version="1.0" ?><svg data-name="Layer 2" id="Layer_2" viewBox="0 0 250 250"
+              xmlns="http://www.w3.org/2000/svg">
+              <title />
+              <path
+                d="M196.66,53.75c-.53-.79-1.11-1.66-1.44-2.22,4.92-15.92.16-29.52-1.43-34-.14-.42-.26-.73-.31-.93a3,3,0,0,0-3.87-2.26,14.19,14.19,0,0,1-4,.66c-4.47.28-9.54.6-30.19,13.1l0,0-.16,0A117.59,117.59,0,0,0,126.07,24,115.87,115.87,0,0,0,97.4,28l-.6.09-3.74-2.24C76.41,15.69,71.24,15.29,66.68,14.93a17.73,17.73,0,0,1-4.11-.65,3,3,0,0,0-3.79,2.27c-.06.2-.17.51-.32.93C56.85,22,52,35.47,57,51.59,43.64,67.75,39.62,93,47.25,113.29c5.55,14.7,19.09,33.13,52,39.49-2.63,3.52-5.46,7.58-6.69,14.51-3.91,1.18-6.94,1.34-9.67.54-3.38-1-5.95-3.25-8.36-7.29-7.85-13.19-19.77-20.43-31.84-19.4A3,3,0,0,0,40,144.39l1.37,15.45a3.25,3.25,0,0,0,3.37,2.94c4-.19,8.46,4.32,11.15,8.86,5.19,8.74,12.22,14.47,20.89,17a35,35,0,0,0,14.92,1.13v36.46a3,3,0,0,0,2.29,2.92,137.33,137.33,0,0,0,64.33,0,3,3,0,0,0,2.3-2.92V175.2c0-12.18-3.84-17.41-7.61-22.41,32.91-6.37,46.45-24.8,52-39.51C216.3,83.23,202,61.81,196.66,53.75Zm2.69,57.42c-5.25,13.89-18.54,31.5-52.06,36.5a3,3,0,0,0-2.07,4.62c.95,1.44,1.92,2.73,2.85,4,3.5,4.65,6.52,8.66,6.5,18.94h0v48.68a132,132,0,0,1-56.92,0V186.23A3,3,0,0,0,94,183.3a29.91,29.91,0,0,1-15.58-.38c-7.18-2.12-13-6.95-17.43-14.34-3-5.13-8.12-10.48-13.91-11.6l-.88-9.9c8.72.53,17.2,6.52,23.15,16.53,3.2,5.37,7,8.54,11.83,10,4.34,1.27,9.12.89,15-1.2a3,3,0,0,0,2-2.46c.87-7,3.5-10.46,6.28-14.16.83-1.1,1.69-2.24,2.5-3.48a3,3,0,0,0,.49-1.65,3,3,0,0,0-2.56-3c-33.53-5-46.82-22.61-52.06-36.5-7-18.46-3.24-41.52,9.05-56.08A5,5,0,0,0,63,50.59c-4.43-13.38-1-25,.7-29.93.89.13,1.71.19,2.51.25,3.89.31,8.3.65,23.75,10l3.78,2.27a4.53,4.53,0,0,0,4,.78,2.07,2.07,0,0,1,.43-.08,2.62,2.62,0,0,0,.56-.09A110.13,110.13,0,0,1,126.07,30a111.79,111.79,0,0,1,27.81,4,3.86,3.86,0,0,0,.49.09l1.22.12a3,3,0,0,0,1.66-.31,8.87,8.87,0,0,0,1.26-.62c19.4-11.76,23.88-12,27.47-12.26.82-.05,1.64-.1,2.58-.24,1.7,5.05,5,16.72.65,29.9-.61,1.88.35,3.32,2.46,6.48C197,65.13,209.6,84,199.35,111.17Z" />
+            </svg>
+          </a>
+        </li>
+        <li class="items linkedin-icon">
+          <a href="https://www.linkedin.com/in/inderjeet-kaur-khokhar/" target="_blank">
+            <?xml version="1.0" ?><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect height="12" width="4" x="2" y="9" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+        </li>
+        <li class="items fb-icon">
+          <a href="https://www.facebook.com/inderjeet.kaur.khokhar" target="_blank">
+            <?xml version="1.0" ?>
+            <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+            <svg height="512px" id="Layer_1" style="enable-background: new 0 0 512 512" version="1.1"
+              viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <path
+                d="M288,192v-38.1c0-17.2,3.8-25.9,30.5-25.9H352V64h-55.9c-68.5,0-91.1,31.4-91.1,85.3V192h-45v64h45v192h83V256h56.4l7.6-64  H288z M330.2,240h-41.1H272v15.5V432h-51V255.5V240h-14.9H176v-32h30.1H221v-16.5v-42.2c0-24.5,5.4-41.2,15.5-51.8  C247.7,85.5,267.6,80,296.1,80H336v32h-17.5c-12,0-27.5,1.1-37.1,11.7c-8.1,9-9.4,20.1-9.4,30.1v37.6V208h17.1H334L330.2,240z" />
+            </svg>
+          </a>
+        </li>
+        <li class="items insta-icon" >
+          <a href="https://www.instagram.com/iam_inderk/" target="_blank">
+            <?xml version="1.0" ?><svg fill="none" height="24" stroke="#000" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect height="20" rx="5" ry="5" width="20" x="2" y="2" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.5" y1="6.5" y2="6.5" />
+            </svg>
+          </a>
+        </li>
+        <div class="vr-line"></div>
+      </ul>
+    </aside>
+    <main class="main-home">
+      <div class="w-h-bg bg-home"></div>
+      <section class="section w-h-sec home-section " id="home-section">
+        <div class="nav-bar">
+          <div class="logo logo-home" data-aos="fade" data-aos-duration="500">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+              <defs></defs>
+              <title>logo-ik2</title>
+              <g id="i-1">
+                <polygon class="cls-1"
+                  points="105.5 139.44 105.5 108.27 132.5 92.68 159.5 108.27 159.5 139.44 132.5 155.03 105.5 139.44" />
+                <path
+                  d="M132.5,93.25l26.5,15.3v30.6l-26.5,15.3L106,139.15v-30.6l26.5-15.3m0-1.15L105,108v31.75l27.5,15.88L160,139.73V108L132.5,92.1Z" />
+              </g>
+              <g id="i-2">
+                <polygon class="cls-1" points="108.5 325.79 108.5 173.5 157.5 173.5 157.5 374.79 108.5 325.79" />
+                <path d="M157,174V373.59l-48-48V174h48m1-1H108V326l50,50h0V173Z" />
+              </g>
+              <g id="k-3">
+                <polygon class="cls-1"
+                  points="199.5 375.5 199.5 249.63 225.95 249.63 255.5 279.18 255.5 375.5 199.5 375.5" />
+                <path d="M225.74,250.13,255,279.39V375H200V250.13h25.74m.42-1H199V376h57V279l-29.84-29.84Z" />
+              </g>
+              <g id="k-2">
+                <polygon class="cls-1"
+                  points="379.19 375.5 230.2 229.38 199.5 229.38 199.5 173.5 256.5 173.5 256.5 201.65 433.76 375.5 379.19 375.5" />
+                <path
+                  d="M256,174v27.86l.3.3L432.53,375H379.39L230.7,229.17l-.29-.29H200V174h56m1-1H199v56.88h31L379,376h56L257,201.44V173Z" />
+              </g>
+              <g id="k-1">
+                <polygon class="cls-1"
+                  points="294.99 212.29 334.64 172.64 396.93 172.64 397.01 172.71 326.21 243.51 294.99 212.29" />
+                <path
+                  d="M395.88,173.14,326.21,242.8,295.7,212.29l39.15-39.15h61m1.26-1H334.43l-40.14,40.15,31.92,31.92,71.5-71.5-.57-.57Z" />
+              </g>
+            </svg>
+          </div>
+          <div class="nav-list">
+            <ul>
+              <li class="items" data-aos="fade-down">
+                <a href="#home-section">Home</a>
+              </li>
+              <li class="items" data-aos="fade-down">
+                <a href="#about-section">About</a>
+              </li>
+              <li class="items" data-aos="fade-down">
+                <a href="#projects-section">Projects</a>
+              </li>
+              <li class="items" data-aos="fade-down">
+                <a href="#exp-section">Experience</a>
+              </li>
+              <li class="items" data-aos="fade-down">
+                <a href="#contact-section">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="def-cont home-content">
+          <span class="typed-effect-home" data-aos="fade-up"></span>
+          <h1 data-aos="fade-up">Inderjeet Kaur Khokhar</h1>
+          <h3 data-aos="fade-up">I make interesting web applications</h3>
+          <p data-aos="fade-up">
+            I am an enthusiastic Full-stack developer looking for an opportunity to further my career in web app
+            development. Having <a href="#exp-section">Experience</a> as a digital marketer, I have a keen interest in
+            building apps to solve customer problems. I have made interesting <a href="#projects-section">Projects</a>
+            from scratch using vanilla JS, node, and monogDB.
+          </p>
+          <div class="btn-home" data-aos="fade-up">
+            <a href="../inderjeet_resume_23 7.pdf" target="_blank"><button class="btn">
+                <span>Resume</span><i class="fa fa-arrow-down"></i>
+              </button></a>
+            <a href="#contact-section"><button class="btn">
+                <span> Need a website ?</span><i class="fa fa-angle-right"></i>
+              </button></a>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="w-h-bg bg-about">
+        <section class="section w-h-sec def-sec about-section" id="about-section">
+          <div class="def-cont about-content" data-aos="fade-up" data-aos-delay="200">
+            <div class="cont-head-div">
+              <h2 class="cont-heading">
+                About Me
+                <hr class="line-neon-effect cont-hr" />
+              </h2>
+            </div>
+            <div class="content-div">
+              <div class="about">
+                <p>
+                  My name is Inderjeet Kaur and I love making interesting web applications. I was introduced to c++
+                  coding
+                  when I was in 11th grade, but it was'nt until recently that I realised I want to advance my career in
+                  this
+                  field.
+                </p>
+                <p>
+                  In my college days, as I was exploring different domains, I got intrigued by digital marketing and how
+                  the dynamics of marketing has changed in today's era. Later on I pursued my career as a full-fledged
+                  digital marketer at an ad agency and a financial firm.
+                </p>
+                <p>
+                  My love for coding started with styling websites and buttons on codepen. Today, I want to do more than
+                  making an interactive website. I want to use my knowledge of marketing and web technology to solve
+                  customer problems or provide an
+                  innovative approach to an already existing solution.
+                </p>
+              </div>
+              <div class="about-img-div">
+                <img src="../public/img/about-img.jpeg" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+
+      <div class="w-h-bg bg-projects">
+        <section class="section w-h-sec def-sec projects-section " id="projects-section">
+          <div class="def-cont projects-content" data-aos="fade-up" data-aos-delay="200">
+            <div class="cont-head-div">
+              <h2 class="cont-heading">
+                My Projects
+                <hr class="line-neon-effect cont-hr" />
+              </h2>
+            </div>
+            <div class="content-div project-cont-div" data-aos="fade-up" data-aos-delay="200">
+              <div class="project-img-div"><a href="#"><img src="../public/img/project-img/chat-app-collage.jpg"
+                    alt="sonu-img"></a></div>
+              <div class="project-text">
+                <h2><a href="">1. Chat App</a></h2>
+                <p>Real time scalable chat application that connect multiple users in different room.
+                  <br>Features - Avatar for each user, Exporting chat, Multiple chat rooms, Leave room.
+                </p>
+                <ul>
+                  <li>Node JS</li>
+                  <li>Express</li>
+                  <li>Socket io</li>
+                </ul>
+                <div class="project-icons"><a href=""><i class="fa fa-github"></a></i><a href=""><i
+                      class="fa fa-sign-in"></i></a></div>
+              </div>
+            </div>
+            <div class="content-div  project-cont-div flex-reverse" data-aos="fade-up" data-aos-delay="200">
+              <div class="project-img-div marg-reset-img"><a href="#"><img
+                    src="../public/img/project-img/Login-app-collage.jpg" alt="sonu-img"></a></div>
+              <div class="project-text marg-reset-text">
+                <h2><a href="">2. Login App</a></h2>
+                <p>Sign up and login application with form validation.<br>Features - 1.Bycrpt password in DB 2.Password
+                  authentication 3.Forget password 4.Unique signup</p>
+                <ul style="justify-content: left;">
+                  <li>Node JS</li>
+                  <li>Express</li>
+                  <li>Mongoose</li>
+                  <li>Mongo DB</li>
+                </ul>
+                <div class="project-icons"><a href=""><i class="fa fa-github"></a></i><a href=""><i
+                      class="fa fa-sign-in"></i></a></div>
+              </div>
+            </div>
+            <div class="content-div project-cont-div" data-aos="fade-up" data-aos-delay="200">
+              <div class="project-img-div"><a href="#"><img src="../public/img/project-img/game-app-collage.png"
+                    alt="sonu-img"></a></div>
+              <div class="project-text">
+                <h2><a href="">3. Game Devleopment</a></h2>
+                <p>Clone of Google chrome dino game made in pure HTML/CSS and Javascript. <br>Features - 1.Score 2.music
+                  3.Cool button moves</p>
+                <ul>
+                  <li>Vanilla JS</li>
+                  <li>HTML5</li>
+                  <li>CSS</li>
+                </ul>
+                <div class="project-icons"><a href=""><i class="fa fa-github"></a></i><a href=""><i
+                      class="fa fa-sign-in"></i></a></div>
+              </div>
+            </div>
+            <div class="content-div  project-cont-div flex-reverse" data-aos="fade-up" data-aos-delay="200">
+              <div class="project-img-div marg-reset-img"><a href="#"><img
+                    src="../public/img/project-img/Dance-app-collage.jpg" alt="sonu-img"></a></div>
+              <div class="project-text marg-reset-text">
+                <h2><a href="">4. Parallax with Mouse movement</a></h2>
+                <p>A website made to demonstrate parallax mouse movement effect. <br>Features - 1.Active contact page
+                  2.Show success message on form submission</p>
+                <ul style="justify-content: left;">
+                  <li>Node JS</li>
+                  <li>Expess</li>
+                  <li>Mongo DB</li>
+                  <li>HTML5/CSS</li>
+                </ul>
+                <div class="project-icons"><a href=""><i class="fa fa-github"></a></i><a href=""><i
+                      class="fa fa-sign-in"></i></a></div>
+              </div>
+            </div>
+            <div class="content-div project-cont-div" data-aos="fade-up" data-aos-delay="200">
+              <div class="project-img-div"><a href="#"><img src="../public/img/project-img/Bootstrap-app-collage.jpg"
+                    alt="sonu-img"></a></div>
+              <div class="project-text">
+                <h2><a href="">5. Bootstrap Framwork</a></h2>
+                <p>Website made with CSS framwork Bootstrap <br>Features - 1.Image Sliders 2.Modals 3.Buttons</p>
+                <ul>
+                  <li>Bootstrap</li>
+                  <li>Express</li>
+                  <li>HTML5/CSS</li>
+                </ul>
+                <div class="project-icons"><a href=""><i class="fa fa-github"></a></i><a href=""><i
+                      class="fa fa-sign-in"></i></a></div>
+              </div>
+            </div>
+            <div class="other-projects-div" data-aos="fade-up" data-aos-delay="200">
+              <div class="cont-head-div">
+                <h2 class="cont-heading" style="text-align:center">
+                  Other Projects
+                  <hr class="line-neon-effect cont-hr " style="width:100%" />
+                </h2>
+              </div>
+              <div class="other-proj-cont">
+                <div class="other-projects other-p1">
+                  <div class="other-proj-img-div"><img src="../public/img/project-img/landing-page.png" alt=""></div>
+                  <h3>1. Landing page</h3>
+                  <p>Pure CSS based landing page design.</p>
+                  <div class="project-icons"><a href=""><i class="fa fa-github"></a></i></div>
+                </div>
+                <div class="other-projects other-p1">
+                  <div class="other-proj-img-div"><img src="../public/img/project-img/food-app-collage.jpg" alt="">
+                  </div>
+                  <h3>2. Static Page -Only CSS</h3>
+                  <p>Only HTML5/CSS food delivery static application.</p>
+                  <div class="project-icons"><a href=""><i class="fa fa-github"></a></i></div>
+                </div>
+              </div>
+              <div class="other-proj-cont">
+                <div class="other-projects other-p1">
+                  <div class="other-proj-img-div"><img src="../public/img/project-img/car-animation.png" alt=""></div>
+                  <h3>3. Car animation Effect</h3>
+                  <p>CSS animation effect demonstration.</p>
+                  <div class="project-icons"><a href=""><i class="fa fa-github"></a></i></div>
+                </div>
+                <div class="other-projects other-p1">
+                  <div class="other-proj-img-div"><img src="../public/img/project-img/clock-animation.png" alt=""></div>
+                  <h3>4. Analog clock</h3>
+                  <p>Analog clock with Javascript date library.</p>
+                  <div class="project-icons"><a href=""><i class="fa fa-github"></a></i></div>
+                </div>
+              </div>
+
+        </section>
+      </div>
+
+
+
+
+      <div class="w-h-bg bg-exp">
+        <section class="section exp-section w-h-sec def-sec" id="exp-section">
+          <div class="def-cont" data-aos="fade-up" data-aos-delay="200">
+            <div class="cont-head-div cont-head-exp">
+              <h2 class="cont-heading">
+                Experience
+                <hr class="line-neon-effect cont-hr" />
+              </h2>
+            </div>
+            <div class="exp-content">
+              <div class="left-div">
+                <div class="item-div left-div1 item-div-not-active item-div-active"><span>Ad Agency</span></div>
+                <div class="item-div left-div2 item-div-not-active"><span>Financial Firm</span></div>
+                <div class="item-div left-div3 item-div-not-active"><span>Skills</span></div>
+                <div class="item-div left-div4 item-div-not-active"><span>Education</span></div>
+                <div class="item-div left-div5 item-div-not-active"><span>Certifications</span></div>
+              </div>
+              <div class="right-div">
+                <div class="right-div1 right-div-show " data-aos="fade-up" data-aos-delay="200">
+                  <h2>Digital Marketing Manager – Bow and arrow Design company</h2>
+                  <p>Mar - May 21</p>
+                  <ul>
+                    <li>Ecommerce Store optimisation and marketing for overseas client – Shopify</li>
+                    <li>Email marketing ( Eid campaign) - 3 to 4 sales per 1500 emails – Mailchimp</li>
+                    <li>Google analytics and GTM setup</li>
+                    <li>Ideation , content planning and execution for 6 clients from different domain</li>
+                  </ul>
+                </div>
+                <div class="right-div2 right-div-hide " data-aos="fade-up" data-aos-delay="200">
+                  <h2>Digital Marketing Manager - The Financial Supermarket</h2>
+                  <p>Sept - Jan 20-21</p>
+                  <ul>
+                    <li>UX of the website</li>
+                    <li>BNI Surat - Social Media Management</li>
+                    <li>Generated Leads through laser focussed targeting on Facebook and Instagram</li>
+                    <li>Launched Organic campaigns on facebook , Instagram , Linkedin and Youtube</li>
+                    <li>Copywriting for ads,Designing and content writing for creatives</li>
+                  </ul>
+                </div>
+                <div class="right-div3 right-div-hide" data-aos="fade-up" data-aos-delay="200">
+                  <h2>Key Skills</h2>
+                  <p>
+                    <hr>
+                  </p>
+                  <ul>
+                    <li>HTML5/CSS</li>
+                    <li>Vanilla JS</li>
+                    <li>Booststrap Framework</li>
+                    <li>Node.js (Express Framework)</li>
+                    <li>Mongo DB</li>
+                    <li>Git</li>
+                    <li>C++, Python</li>
+                    <li><b>Others</b> - Graphic designing - Adobe illustrator, Video Editing - Premiere Pro</li>
+                  </ul>
+                </div>
+                <div class="right-div4 right-div-hide" data-aos="fade-up" data-aos-delay="200">
+                  <h2>Education</h2>
+                  <p>
+                    <hr>
+                  </p>
+                  <ul>
+                    <li>June 2019-July 2019 - ONGC Hazira Training
+                      Operation and Maintenance of various plant Electrical Equipments</li>
+                    <li>2016-2020 - B.E Electrical engineering
+                      Sarvajanik college of Engineering and Technology (Gujarat Technological University )</li>
+                  </ul>
+                </div>
+                <div class="right-div5 right-div-hide" data-aos="fade-up" data-aos-delay="200">
+                  <h2>Certifications</h2>
+                  <p>
+                    <hr>
+                  </p>
+                  <ul>
+                    <li>NPTEL introduction to modern application development</li>
+                    <li>Google fundamentals of Digital Marketing</li>
+                    <li>Coursera SEO fundamentals</li>
+                    <li>Hubspot inbound marketing</li>
+                    <li>Google Analytics for beginners</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+
+
+      <div class="w-h-bg bg-contact " id="contact-section">
+        <section class="w-h-sec def-sec section contact-section ">
+          <div class="def-cont contact-content" data-aos="fade-up" data-aos-delay="200">
+            <div class="cont-head-div">
+              <h2 class="cont-heading" style="text-align:center">
+                Contact Me
+                <hr class="line-neon-effect cont-hr " style="width:100%" />
+              </h2>
+            </div>
+            <p>If you are looking to hire a full stack developer or need my services for your website, you can get in
+              touch with me!</p>
+            <div class="btn-contact" data-aos="fade-up">
+              <button class="btn email-btn">
+                <span> Email Me!</span><i class="fa fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <p><a href="">Created by Inderjeet Kaur</a></p>
+          <p>Design inspiration - brittanychiang.com</p>
+        </footer>
+      </div>
+
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="../public/js/test.js"></script>
+  <script src="https://kit.fontawesome.com/bd4ab4d7ef.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    window.addEventListener("scroll", function () {
+      AOS.refresh();
+    });
+  </script>
+</body>
+
+</html>

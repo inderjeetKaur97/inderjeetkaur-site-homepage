@@ -1,0 +1,322 @@
+/* ---------show home page after loading logo effect -----------*/
+
+.hide-home {
+  visibility: hidden;
+}
+
+/* -----------------------------------------Start - homepage design---------------------------------------- */
+
+/* -----------Home-section design-------- */
+.bg-home {
+  position: relative;
+  background-image: url("/img/bg-home.jpg");
+  background-position: center;
+  background-size: 140%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.bg-home::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: black;
+  opacity: 0.85;
+  height: 110vh;
+  width: 100vw;
+}
+
+.home-section {
+  position: absolute;
+  top: 0;
+  left: 8.5%;
+}
+
+.nav-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 3%;
+  color: white;
+}
+/*------- start - classes added by javacript to navbar hide and show---------- */
+.nav-bar-lock {
+  background-color: #29292a;
+  position: fixed;
+  align-items: center;
+  width: 83vw;
+  top: -6%;
+  left: 8%;
+  z-index: +1;
+  box-shadow: 2px 12px 27px 0.7px rgb(19, 18, 18);
+}
+.nav-bar-logo-lock {
+  padding: 1.5% 0;
+  height: 21vh;
+  transform: scale(0.8);
+}
+/*------- End - classes added by javacript to navbar hide and show---------- */
+
+.nav-bar .logo-home {
+  margin: -3% 0%;
+}
+.nav-bar .logo-home svg {
+  width: 13vw;
+  height: 17vh;
+}
+.nav-bar .logo-home svg:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.nav-bar .nav-list {
+  margin-right: 1%;
+}
+.nav-bar ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.nav-bar ul li {
+  transition: transform 0.1s linear;
+}
+.nav-bar ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  font-family: var(--pri-font);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: transform 0.2s ease-in;
+}
+
+.nav-bar ul a:hover {
+  transform: scale(1.15);
+  border-bottom: 3px solid var(--pri-color);
+  margin: -2% 0;
+}
+
+/*---------- Animations styling in the logo on the home section------------------------------ */
+@keyframes flicker {
+  0%,
+  3%,
+  23%,
+  63% {
+    filter: drop-shadow(1px 1px 1px #000000);
+  }
+  2%,
+  30%,
+  50% {
+    filter: drop-shadow(1px 1px 5px #130707);
+  }
+  10%,
+  40%,
+  70% {
+    filter: drop-shadow(1px 1px 5px #380202);
+  }
+  20%,
+  80%,
+  90% {
+    filter: drop-shadow(1px 1px 1px #790909);
+  }
+}
+
+/* ------------------Social icons section css------------------------- */
+.home-div-cont {
+  display: flex;
+}
+
+.social-icons {
+  background-color: transparent;
+  color: red;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: +1;
+  width: 5vw;
+  bottom: 0%;
+  /* height: 50vh; */
+}
+
+.social-icons ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* justify-content: space-between; */
+  list-style: none;
+  height: 58vh;
+  width: inherit;
+}
+
+.social-icons .items svg {
+  height: 5vw;
+  width: 5vh;
+  margin-left: 46%;
+  stroke: var(--ter-color);
+  position: relative;
+  transition: top 0.4s ease 0s;
+  top: 0;
+}
+.social-icons .items svg:hover {
+  stroke: var(--pri-color);
+  top: -8%;
+}
+
+.social-icons .git-icon svg {
+  stroke-width: 8px;
+}
+
+.social-icons .linkedin-icon svg {
+  width: 4vh;
+  stroke-width: 1.5px;
+}
+
+.social-icons .fb-icon svg {
+  width: 6vh;
+  stroke-width: 15px;
+}
+
+.social-icons .insta-icon svg {
+  width: 4vh;
+  stroke-width: 1.5px;
+}
+
+.social-icons ul .vr-line {
+  border-left: 0.2vw solid var(--ter-color);
+  height: 38%;
+}
+
+/* -------------------Home section content styling ---------------*/
+
+.home-content .typed-effect-home {
+  color: var(--sec-color);
+  color: white;
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+}
+
+.home-content p:nth-child(5) {
+  color: #c7c7c7;
+  font-family: "PT Sans Caption", sans-serif;
+  width: 30vw;
+  text-align: justify;
+  margin-bottom: 5%;
+}
+
+.home-content h1 {
+  color: #e3e3e3;
+  font-family: var(--pri-font);
+  font-weight: bolder;
+  font-size: 3.5rem;
+  margin-top: 2%;
+}
+
+.home-content h3 {
+  color: var(--pri-color-d1);
+  /* color: #c1d6d6; */
+  font-family: var(--pri-font);
+  font-weight: bolder;
+  font-size: 3rem;
+  margin-bottom: 2.5%;
+}
+.btn-home .btn {
+  background-color: #717171;
+  opacity: 0.75;
+  border: 2px solid #717171;
+  box-shadow: 3px 5px 20px var(ter-color-btn-shadow);
+  border-radius: 1%;
+  width: 20%;
+  height: 7vh;
+  margin-right: 2%;
+  position: relative;
+  top: 0;
+  transition: border 0.5s ease-in;
+  transition: background-color 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+  transition: top 0.2s ease-out;
+}
+.btn-home .btn span {
+  display: inline-block;
+  font-family: var(--pri-font);
+  font-weight: 600;
+  font-size: 0.85rem;
+  width: 80%;
+  color: whitesmoke;
+}
+.btn-home .btn i {
+  transform: scale(2);
+  color: var(--ter-color-l2);
+  /* margin-right: 0; */
+}
+.btn-home .btn:hover {
+  background-color: var(--pri-color);
+  border: 2px solid var(--pri-color);
+  cursor: pointer;
+  opacity: 1;
+  top: -1vh;
+}
+
+/* -------------------About section content styling ---------------*/
+
+.about {
+  width: 60%;
+  margin-right: 10%;
+}
+
+.about p {
+  color: #c7c7c7;
+  font-family: "PT Sans Caption", sans-serif;
+  padding: 3% 0;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.about-img-div {
+  width: 30%;
+  margin: auto;
+  height: 44vh;
+  background-color: var(--pri-color);
+  transition: background-color 0.3s ease-in;
+}
+
+.about-img-div img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(1.1);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.about-img-div img:hover {
+  opacity: 1;
+}
+
+.about-img-div:hover {
+  background-color: var(--ter-color-d2);
+}
+
+.about-img-div::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: -0.5%;
+  width: 25%;
+  height: 48%;
+  border: 3px solid var(--pri-color-d1);
+  z-index: -1;
+  box-shadow: 0 0 1px var(--ter-color-d1), 0 0 5px #29171c,
+    0 0 10px #8d1130, -0 0 15px var(--pri-color);
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in;
+
+}
+
+.about-img-div:hover::before {
+  transform: scale(1.05);
+}
+/* -----------------------------------------End - homepage design---------------------------------------- */
