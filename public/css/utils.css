@@ -9,6 +9,8 @@
 body {
   overflow-y: auto;
   overflow-x: hidden;
+  /* height: auto; */
+  /* width: auto; */
 }
 body::-webkit-scrollbar {
   width: 0.5vw;
@@ -211,14 +213,15 @@ body[data-aos-delay="4800"] [data-aos],
 [data-aos][data-aos][data-aos-delay="4800"] {
   transition-delay: 4800ms;
 }
-body[data-aos-delay="5000"] [data-aos],
-[data-aos][data-aos][data-aos-delay="5000"] {
-  transition-delay: 5000ms;
-}
 body[data-aos-delay="4900"] [data-aos],
 [data-aos][data-aos][data-aos-delay="4900"] {
   transition-delay: 4900ms;
 }
+body[data-aos-delay="5000"] [data-aos],
+[data-aos][data-aos][data-aos-delay="5000"] {
+  transition-delay: 5000ms;
+}
+
 /* test--------------------- */
 
 

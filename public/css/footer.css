@@ -1,0 +1,32 @@
+ /* -------------------------footer styling---------------------- */
+ footer {
+    background-color: var(--ter-color-d2);
+    height: 10vh;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    color: var(--pri-color-d1);
+    /* margin-bottom: 10px; */
+    font-size: 0.8rem;
+    font-family: var(--pri-font);
+  }
+
+  footer p {
+    /* background-color: var(--ter-color-d2); */
+    text-align: center;
+    margin-bottom: 10%;
+    font-weight: 500;
+    font-size: 0.7rem;
+    margin-bottom: 1vh;
+    color: whitesmoke;
+  }
+
+  footer a {
+    color: var(--ter-color-l2);
+    font-size: 1.1rem;
+  }
+
+  footer a:hover {
+    color: var(--pri-color)
+  }

@@ -18,7 +18,7 @@
     }
 
     body {
-      overflow-y: auto;
+      overflow-y: scroll;
       overflow-x: hidden;
       height: auto;
       width: auto;
@@ -63,7 +63,7 @@
     /*------------------------ End - classes added by javacript to navbar hide and show---------- */
 
     .nav-bar .logo-home {
-      margin: -3% 0%;
+      margin: -10% 0%;
     }
 
     .nav-bar .logo-home svg {
@@ -250,7 +250,7 @@
 
     .home-content {
       margin: 0 6%;
-      margin-top: 5%;
+      margin-top: 4%;
     }
 
     .home-content .typed-effect-home {
@@ -548,14 +548,16 @@
       align-items: center;
       /* background-color: pink; */
     }
-
+    .content-exp{
+      margin-top: -2px;
+    }
     .exp-content {
       /* border: 2px solid rgb(12, 248, 228); */
       width: 70%;
       height: 50%;
       position: relative;
       display: flex;
-      margin: auto;
+      margin:  auto;
     }
 
     .cont-head-exp {
@@ -658,18 +660,6 @@
       transition: border-left 0.2s ease-in-out;
     }
 
-   
-
-   
-
-
-
-
-
-
-
-
-
 
     /* -------------------------footer styling---------------------- */
     footer {
@@ -715,6 +705,9 @@
       margin-left: 5%;
       margin-top: 2%;
     }
+    .nav-bar .logo-link{
+      height: 12vh;
+    }
   </style>
 </head>
 
@@ -723,7 +716,7 @@
     <aside class="social-icons" data-aos="fade" data-aos-duration="1500">
       <ul>
         <li class="items git-icon">
-          <a href="#">
+          <a href="https://github.com/inderjeetKaur97" target="_blank">
             <?xml version="1.0" ?><svg data-name="Layer 2" id="Layer_2" viewBox="0 0 250 250"
               xmlns="http://www.w3.org/2000/svg">
               <title />
@@ -773,6 +766,7 @@
       <div class="w-h-bg bg-home"></div>
       <section class="section w-h-sec home-section " id="home-section">
         <div class="nav-bar">
+          <a class="logo-link" href="/">
           <div class="logo logo-home" data-aos="fade" data-aos-duration="500">
             <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
               <defs></defs>
@@ -806,6 +800,7 @@
               </g>
             </svg>
           </div>
+        </a>
           <div class="nav-list">
             <ul>
               <li class="items" data-aos="fade-down">
@@ -834,7 +829,7 @@
             I am an enthusiastic Full-stack developer looking for an opportunity to further my career in web app
             development. Having <a href="#exp-section">Experience</a> as a digital marketer, I have a keen interest in
             building apps to solve customer problems. I have made interesting <a href="#projects-section">Projects</a>
-            from scratch using vanilla JS, node, and monogDB.
+            from scratch using vanilla JS, node, and mongo DB.
           </p>
           <div class="btn-home" data-aos="fade-up">
             <a href="../inderjeet_resume_23 7.pdf" target="_blank"><button class="btn">
@@ -898,10 +893,10 @@
               </h2>
             </div>
             <div class="content-div project-cont-div" data-aos="fade-up" data-aos-delay="200">
-              <div class="project-img-div"><a href="#"><img src="../public/img/project-img/chat-app-collage.jpg"
+              <div class="project-img-div"><a href="https://chatapp.inderjeetkaur.in/" target="_blank"><img src="../public/img/project-img/chat-app-collage.jpg"
                     alt="sonu-img"></a></div>
               <div class="project-text">
-                <h2><a href="">1. Chat App</a></h2>
+                <h2><a href="https://chatapp.inderjeetkaur.in/" target="_blank">1. Chat App</a></h2>
                 <p>Real time scalable chat application that connect multiple users in different room.
                   <br>Features - Avatar for each user, Exporting chat, Multiple chat rooms, Leave room.
                 </p>
@@ -910,15 +905,15 @@
                   <li>Express</li>
                   <li>Socket io</li>
                 </ul>
-                <div class="project-icons"><a href=""><i class="fa fa-github"></a></i><a href=""><i
+                <div class="project-icons"><a href="https://github.com/inderjeetKaur97/chatapp" target="_blank"><i class="fa fa-github"></a></i><a href="https://chatapp.inderjeetkaur.in/" target="_blank"><i
                       class="fa fa-sign-in"></i></a></div>
               </div>
             </div>
             <div class="content-div  project-cont-div flex-reverse" data-aos="fade-up" data-aos-delay="200">
-              <div class="project-img-div marg-reset-img"><a href="#"><img
+              <div class="project-img-div marg-reset-img"><a href="https://loginapp.inderjeetkaur.in/" target="_blank"><img
                     src="../public/img/project-img/Login-app-collage.jpg" alt="sonu-img"></a></div>
               <div class="project-text marg-reset-text">
-                <h2><a href="">2. Login App</a></h2>
+                <h2><a href="https://loginapp.inderjeetkaur.in/" target="_blank">2. Login App</a></h2>
                 <p>Sign up and login application with form validation.<br>Features - 1.Bycrpt password in DB 2.Password
                   authentication 3.Forget password 4.Unique signup</p>
                 <ul style="justify-content: left;">
@@ -927,15 +922,15 @@
                   <li>Mongoose</li>
                   <li>Mongo DB</li>
                 </ul>
-                <div class="project-icons"><a href=""><i class="fa fa-github"></a></i><a href=""><i
+                <div class="project-icons"><a href="https://github.com/inderjeetKaur97/Login-app" target="_blank"><i class="fa fa-github"></a></i><a href="https://loginapp.inderjeetkaur.in/" target="_blank"><i
                       class="fa fa-sign-in"></i></a></div>
               </div>
             </div>
             <div class="content-div project-cont-div" data-aos="fade-up" data-aos-delay="200">
-              <div class="project-img-div"><a href="#"><img src="../public/img/project-img/game-app-collage.png"
+              <div class="project-img-div"><a href="https://mariogame.inderjeetkaur.in/" target="_blank"><img src="../public/img/project-img/game-app-collage.png"
                     alt="sonu-img"></a></div>
               <div class="project-text">
-                <h2><a href="">3. Game Devleopment</a></h2>
+                <h2><a href="https://mariogame.inderjeetkaur.in/" target="_blank">3. Game Devleopment</a></h2>
                 <p>Clone of Google chrome dino game made in pure HTML/CSS and Javascript. <br>Features - 1.Score 2.music
                   3.Cool button moves</p>
                 <ul>
@@ -943,15 +938,15 @@
                   <li>HTML5</li>
                   <li>CSS</li>
                 </ul>
-                <div class="project-icons"><a href=""><i class="fa fa-github"></a></i><a href=""><i
-                      class="fa fa-sign-in"></i></a></div>
-              </div>
+                <div class="project-icons"><a href="https://github.com/inderjeetKaur97/mario-game" target="_blank"><i class="fa fa-github"></a></i><a href="https://mariogame.inderjeetkaur.in/" target="_blank"><i
+                  class="fa fa-sign-in"></i></a></div>
+          </div>
             </div>
             <div class="content-div  project-cont-div flex-reverse" data-aos="fade-up" data-aos-delay="200">
-              <div class="project-img-div marg-reset-img"><a href="#"><img
+              <div class="project-img-div marg-reset-img"><a href="https://danceapp.inderjeetkaur.in/" target="_blank"><img
                     src="../public/img/project-img/Dance-app-collage.jpg" alt="sonu-img"></a></div>
               <div class="project-text marg-reset-text">
-                <h2><a href="">4. Parallax with Mouse movement</a></h2>
+                <h2><a href="https://danceapp.inderjeetkaur.in/" target="_blank">4. Parallax with Mouse movement</a></h2>
                 <p>A website made to demonstrate parallax mouse movement effect. <br>Features - 1.Active contact page
                   2.Show success message on form submission</p>
                 <ul style="justify-content: left;">
@@ -960,22 +955,22 @@
                   <li>Mongo DB</li>
                   <li>HTML5/CSS</li>
                 </ul>
-                <div class="project-icons"><a href=""><i class="fa fa-github"></a></i><a href=""><i
+                  <div class="project-icons"><a href="https://github.com/inderjeetKaur97/Mouse-parallyx-effect---dance-app" target="_blank"><i class="fa fa-github"></a></i><a href="https://danceapp.inderjeetkaur.in/" target="_blank"><i
                       class="fa fa-sign-in"></i></a></div>
               </div>
             </div>
             <div class="content-div project-cont-div" data-aos="fade-up" data-aos-delay="200">
-              <div class="project-img-div"><a href="#"><img src="../public/img/project-img/Bootstrap-app-collage.jpg"
+              <div class="project-img-div"><a href="https://loginapp.inderjeetkaur.in/home" target="_blank"><img src="../public/img/project-img/Bootstrap-app-collage.jpg"
                     alt="sonu-img"></a></div>
               <div class="project-text">
-                <h2><a href="">5. Bootstrap Framwork</a></h2>
+                <h2><a href="https://loginapp.inderjeetkaur.in/home" target="_blank">5. Bootstrap Framwork</a></h2>
                 <p>Website made with CSS framwork Bootstrap <br>Features - 1.Image Sliders 2.Modals 3.Buttons</p>
                 <ul>
                   <li>Bootstrap</li>
                   <li>Express</li>
                   <li>HTML5/CSS</li>
                 </ul>
-                <div class="project-icons"><a href=""><i class="fa fa-github"></a></i><a href=""><i
+                <div class="project-icons"><a href=""><i class="fa fa-github"></a></i><a href="https://loginapp.inderjeetkaur.in/home" target="_blank"><i
                       class="fa fa-sign-in"></i></a></div>
               </div>
             </div>
@@ -991,28 +986,28 @@
                   <div class="other-proj-img-div"><img src="../public/img/project-img/landing-page.png" alt=""></div>
                   <h3>1. Landing page</h3>
                   <p>Pure CSS based landing page design.</p>
-                  <div class="project-icons"><a href=""><i class="fa fa-github"></a></i></div>
+                  <div class="project-icons"><a href="https://github.com/inderjeetKaur97/gym-landing-page" target="_blank"><i class="fa fa-github"></a></i></div>
                 </div>
                 <div class="other-projects other-p1">
                   <div class="other-proj-img-div"><img src="../public/img/project-img/food-app-collage.jpg" alt="">
                   </div>
                   <h3>2. Static Page -Only CSS</h3>
                   <p>Only HTML5/CSS food delivery static application.</p>
-                  <div class="project-icons"><a href=""><i class="fa fa-github"></a></i></div>
+                  <div class="project-icons"><a href="https://github.com/inderjeetKaur97/foodapp" target="_blank"><i class="fa fa-github"></a></i></div>
                 </div>
               </div>
               <div class="other-proj-cont">
                 <div class="other-projects other-p1">
-                  <div class="other-proj-img-div"><img src="../public/img/project-img/car-animation.png" alt=""></div>
+                  <div class="other-proj-img-div"><img src="../public/img/project-img/car-animation.png"  alt=""></div>
                   <h3>3. Car animation Effect</h3>
                   <p>CSS animation effect demonstration.</p>
-                  <div class="project-icons"><a href=""><i class="fa fa-github"></a></i></div>
+                  <div class="project-icons"><a href="https://github.com/inderjeetKaur97/car-animation" target="_blank"><i class="fa fa-github"></a></i></div>
                 </div>
                 <div class="other-projects other-p1">
                   <div class="other-proj-img-div"><img src="../public/img/project-img/clock-animation.png" alt=""></div>
                   <h3>4. Analog clock</h3>
                   <p>Analog clock with Javascript date library.</p>
-                  <div class="project-icons"><a href=""><i class="fa fa-github"></a></i></div>
+                  <div class="project-icons"><a href="https://github.com/inderjeetKaur97/analog-clock" target="_blank"><i class="fa fa-github"></a></i></div>
                 </div>
               </div>
 
@@ -1024,7 +1019,7 @@
 
       <div class="w-h-bg bg-exp">
         <section class="section exp-section w-h-sec def-sec" id="exp-section">
-          <div class="def-cont" data-aos="fade-up" data-aos-delay="200">
+          <div class="def-cont content-exp" data-aos="fade-up" data-aos-delay="200">
             <div class="cont-head-div cont-head-exp">
               <h2 class="cont-heading">
                 Experience
@@ -1059,6 +1054,7 @@
                     <li>Generated Leads through laser focussed targeting on Facebook and Instagram</li>
                     <li>Launched Organic campaigns on facebook , Instagram , Linkedin and Youtube</li>
                     <li>Copywriting for ads,Designing and content writing for creatives</li>
+                    <li><a href="https://www.facebook.com/BNISurat" style="color: white;">www.facebook.com/BNISurat</a></li>
                   </ul>
                 </div>
                 <div class="right-div3 right-div-hide" data-aos="fade-up" data-aos-delay="200">

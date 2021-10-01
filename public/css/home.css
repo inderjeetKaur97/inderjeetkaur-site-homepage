@@ -6,34 +6,7 @@
 
 /* -----------------------------------------Start - homepage design---------------------------------------- */
 
-/* -----------Home-section design-------- */
-.bg-home {
-  position: relative;
-  background-image: url("/img/bg-home.jpg");
-  background-position: center;
-  background-size: 140%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  z-index: -1;
-}
-
-.bg-home::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: black;
-  opacity: 0.85;
-  height: 110vh;
-  width: 100vw;
-}
-
-.home-section {
-  position: absolute;
-  top: 0;
-  left: 8.5%;
-}
-
+/* ----------------navbar style----------------------  */
 .nav-bar {
   display: flex;
   width: 100%;
@@ -41,7 +14,20 @@
   margin-top: 3%;
   color: white;
 }
+.nav-list {
+  margin-right: 1%;
+}
+
 /*------- start - classes added by javacript to navbar hide and show---------- */
+.nav-bar-hide {
+  top: -20%;
+  transition: top 0.3s linear 0s;
+}
+
+.nav-bar-show {
+  top: -6%;
+  transition: top 0.3s linear 0s;
+}
 .nav-bar-lock {
   background-color: #29292a;
   position: fixed;
@@ -58,9 +44,11 @@
   transform: scale(0.8);
 }
 /*------- End - classes added by javacript to navbar hide and show---------- */
-
+.nav-bar .logo-link{
+  height: 12vh;
+}
 .nav-bar .logo-home {
-  margin: -3% 0%;
+  margin: -10% 0%;
 }
 .nav-bar .logo-home svg {
   width: 13vw;
@@ -100,7 +88,8 @@
   margin: -2% 0;
 }
 
-/*---------- Animations styling in the logo on the home section------------------------------ */
+
+/*---------- Animations styling in the logo on the home section---------------- */
 @keyframes flicker {
   0%,
   3%,
@@ -191,23 +180,65 @@
   height: 38%;
 }
 
-/* -------------------Home section content styling ---------------*/
+/* ---------------------------home-content Style--------------------- */
+
+.bg-home {
+  position: relative;
+  background-image: url("/img/bg-home.jpg");
+  background-position: center;
+  background-size: 140%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+.bg-home::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: black;
+  opacity: 0.85;
+  height: 100%;
+  width: 100vw;
+}
+
+/* -----changing home section default setting------ */
+.home-section {
+  position: absolute;
+  top: 0;
+  left: 8.5%;
+}
+
+.home-content {
+  margin: 0 6%;
+  margin-top: 4%;
+}
 
 .home-content .typed-effect-home {
+  display: inline-block;
   color: var(--sec-color);
   color: white;
-  font-family: "PT Mono", monospace;
+  font-family: var(--ter-font);
   font-size: 1.1rem;
+  margin-top: -1%;
 }
 
 .home-content p:nth-child(5) {
-  color: #c7c7c7;
-  font-family: "PT Sans Caption", sans-serif;
   width: 30vw;
   text-align: justify;
   margin-bottom: 5%;
 }
+.home-content p:nth-child(5) a {
+  color: var(--pri-color);
+  font-weight: 600;
+  transition: text-decoration 1s ease-in;
+}
 
+.home-content p:nth-child(5) a:hover {
+  text-decoration: underline;
+}
 .home-content h1 {
   color: #e3e3e3;
   font-family: var(--pri-font);
@@ -218,59 +249,23 @@
 
 .home-content h3 {
   color: var(--pri-color-d1);
-  /* color: #c1d6d6; */
   font-family: var(--pri-font);
   font-weight: bolder;
   font-size: 3rem;
   margin-bottom: 2.5%;
 }
-.btn-home .btn {
-  background-color: #717171;
-  opacity: 0.75;
-  border: 2px solid #717171;
-  box-shadow: 3px 5px 20px var(ter-color-btn-shadow);
-  border-radius: 1%;
-  width: 20%;
-  height: 7vh;
-  margin-right: 2%;
-  position: relative;
-  top: 0;
-  transition: border 0.5s ease-in;
-  transition: background-color 0.5s ease-in;
-  transition: opacity 0.5s ease-in;
-  transition: top 0.2s ease-out;
-}
-.btn-home .btn span {
-  display: inline-block;
-  font-family: var(--pri-font);
-  font-weight: 600;
-  font-size: 0.85rem;
-  width: 80%;
-  color: whitesmoke;
-}
-.btn-home .btn i {
-  transform: scale(2);
-  color: var(--ter-color-l2);
-  /* margin-right: 0; */
-}
-.btn-home .btn:hover {
-  background-color: var(--pri-color);
-  border: 2px solid var(--pri-color);
-  cursor: pointer;
-  opacity: 1;
-  top: -1vh;
-}
+
 
 /* -------------------About section content styling ---------------*/
 
-.about {
+ /* ------------------------about section css ------------------*/
+
+ .about {
   width: 60%;
   margin-right: 10%;
 }
 
 .about p {
-  color: #c7c7c7;
-  font-family: "PT Sans Caption", sans-serif;
   padding: 3% 0;
   font-size: 1.1rem;
   text-align: justify;
@@ -279,16 +274,17 @@
 .about-img-div {
   width: 30%;
   margin: auto;
-  height: 44vh;
+  position: relative;
+  opacity: 1;
   background-color: var(--pri-color);
   transition: background-color 0.3s ease-in;
 }
 
 .about-img-div img {
   width: 100%;
-  height: 100%;
+  position: relative;
   filter: brightness(1.1);
-  opacity: 0.5;
+  opacity: 0.6;
   transition: opacity 0.3s ease;
 }
 
@@ -300,23 +296,359 @@
   background-color: var(--ter-color-d2);
 }
 
+.bg-about {
+  position: relative;
+  z-index: 0;
+}
+
 .about-img-div::before {
   content: "";
   position: absolute;
-  top: 40%;
-  right: -0.5%;
-  width: 25%;
-  height: 48%;
+  top: 20%;
+  right: -1%;
+  width: 100%;
+  height: 80%;
   border: 3px solid var(--pri-color-d1);
   z-index: -1;
   box-shadow: 0 0 1px var(--ter-color-d1), 0 0 5px #29171c,
     0 0 10px #8d1130, -0 0 15px var(--pri-color);
   transform: scale(1.1);
   transition: transform 0.3s ease-in;
-
 }
 
 .about-img-div:hover::before {
   transform: scale(1.05);
 }
+
+.cont-head-div {
+  margin-top: 8%;
+}
+
+/* ------------------------projects section css ------------------*/
+
+.project-cont-div {
+  margin-bottom: 15%;
+  position: relative;
+  height: 50vh;
+}
+
+.project-img-div {
+  position: relative;
+  left: -22%;
+  top: 0%;
+  width: 40vw;
+  background-color: var(--pri-color);
+}
+
+.project-img-div img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  box-shadow: 3px 3px 10px black;
+}
+
+.project-img-div img:hover {
+  opacity: 1;
+}
+
+.project-img-div:hover {
+  transform: scale(0.99);
+}
+
+.project-text {
+  position: absolute;
+  right: -5%;
+  top: 23%;
+  /* new line  */
+  width: 58%;
+  height: 16vh;
+  margin-left: 5%;
+  text-align: right;
+
+}
+
+.project-text h2 {
+  margin-bottom: 4%;
+
+}
+
+.project-text h2 a {
+  color: var(--ter-color-l2);
+  font-family: var(--pri-font);
+  font-weight: 600;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+
+}
+
+.project-text a:hover {
+  color: var(--pri-color);
+}
+
+.project-text p {
+  
+  background-color: var(--ter-color-d1);
+  box-shadow: 5px 3px 15px black;
+  opacity: 0.9;
+  border-radius: 4px;
+  padding: 3% 3%;
+  font-size: 0.9rem;
+
+}
+.project-text ul {
+  display: flex;
+  color: var(--ter-color-l2);
+  font-family: var(--ter-font);
+  justify-content: right;
+}
+
+.project-text li {
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+.project-icons {
+  width: 100%;
+  margin-top: 5%;
+}
+
+.project-icons i {
+  color: var(--ter-color-l1);
+  transform: scale(1.5);
+  margin: 0 4%;
+  position: relative;
+  top: 0;
+  transition: top 0.3s ease;
+
+
+}
+
+.project-icons i:hover {
+  color: var(--pri-color);
+  top: -0.7vh;
+
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+
+.marg-reset-img {
+  left: 22%;
+}
+
+.marg-reset-text {
+  margin-left: 0;
+  text-align: left;
+  left: -5%;
+}
+
+/*------------- other projects style --------------- */
+.other-proj-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.other-projects {
+  width: 50%;
+  height: 55vh;
+  text-align: left;
+  margin: 5%;
+}
+
+.other-proj-img-div {
+  background-color: var(--pri-color);
+  position: relative;
+  width: 100%;
+}
+
+.other-projects img {
+  width: 100%;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.other-projects img:hover {
+
+  opacity: 1;
+}
+
+.other-projects h3 {
+  font-family: var(--pri-font);
+  color: var(--ter-color-l2);
+  margin: 5% 0;
+}
+
+.other-projects p {
+  font-size: 0.9rem;
+}
+
+.other-projects i {
+  margin-left: 1%;
+  margin-top: 2%;
+  transform: scale(1.7);
+}
+
+
+/* ------------------experience section styling ------------- */
+.exp-section {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* background-color: pink; */
+}
+.content-exp{
+  margin-top: -2px;
+}
+.exp-content {
+  /* border: 2px solid rgb(12, 248, 228); */
+  width: 70%;
+  height: 50%;
+  position: relative;
+  display: flex;
+  margin: auto;
+}
+
+.cont-head-exp {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.cont-head-exp hr {
+  width: 100%;
+}
+
+.exp-content .left-div {
+  /* border: 2px solid pink; */
+  width: 30%;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 3%;
+
+}
+
+.exp-content .left-div .item-div {
+  /* border: 2px solid green; */
+  height: 100%;
+  justify-content: space-between;
+  margin: 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.exp-content .left-div .item-div span {
+  font-family: var(--pri-font);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.exp-content .left-div .item-div:hover {
+  cursor: pointer;
+  background-color: var(--ter-color-d3);
+  color: var(--pri-color);
+}
+
+.exp-content .right-div {
+  width: 100%;
+}
+
+.exp-content .right-div h2 {
+  color: var(--ter-color-l2);
+  font-family: var(--pri-font);
+  margin: 0 0;
+}
+
+.exp-content .right-div p {
+ 
+  margin: 3% 0;
+}
+
+.exp-content .right-div ul {
+  margin: 5% 0;
+}
+
+.exp-content .right-div li {
+  color: var(--ter-color-l1);
+  font-family: var(--sec-font);
+  margin: 2% 0;
+  font-size: 0.83rem;
+  margin-bottom: 4%;
+}
+
+.right-div-show {
+  display: inline-block;
+
+}
+
+.right-div-hide {
+  display: none;
+}
+
+.item-div-not-active {
+  border-left: 2px solid var(--ter-color-l1);
+  color: var(--ter-color-l1);
+  transition: color 0.3s ease-in;
+  transition: background-color 1s ease-in;
+  transition: border-left 0.2s ease-in-out;
+
+}
+
+.item-div-active {
+  border-left: 2px solid var(--pri-color-d1);
+  background-color: var(--ter-color-d3);
+  color: var(--pri-color);
+  transition: color 0.3s ease-in;
+  transition: background-color 1s ease-in;
+  transition: border-left 0.2s ease-in-out;
+}
+
+/* -----------contact section style ------------- */
+.contact-section .contact-content {
+  position: relative;
+  bottom: -20vh;
+  width: 50%;
+
+}
+.contact-content p {
+  height: 24%;
+  /* new line  */
+  margin-top: 10%;
+  text-align: center;
+}
+
+.btn-contact {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.btn-contact .btn{
+  width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* -----------------------------------------End - homepage design---------------------------------------- */
